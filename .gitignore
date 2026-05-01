@@ -1,0 +1,9 @@
+FashFusion/data/hnm/images/
+FashFusion/data/hnm/
+FashFusion/data/polyvore
+FashFusion/output
+data/hnm/images/
+data/hnm/*.csv
+data/hnm/~$*
+data/polyvore/
+output/
