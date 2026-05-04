@@ -5,3 +5,9 @@ __pycache__/
 *.pkl
 *.zip
 .DS_Store
+
+!data/
+!data/polyvore/
+!data/polyvore/.gitkeep
+!data/hnm/
+!data/hnm/.gitkeep
