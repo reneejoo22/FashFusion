@@ -10,6 +10,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, classification_report
+from sklearn.dummy import DummyClassifier
 import joblib, os
 
 # ================================================
@@ -187,6 +188,7 @@ print(f"Train: {X_train.shape} / Test: {X_test.shape}")
 print("\n[7] 모델 학습")
 
 models_to_try = {
+    "Random Classifier":   DummyClassifier(strategy="uniform", random_state=42),
     "Logistic Regression": LogisticRegression(max_iter=1000, random_state=42),
     "MLP Classifier":      MLPClassifier(
                                hidden_layer_sizes=(256, 128),
