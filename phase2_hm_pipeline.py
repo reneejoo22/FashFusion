@@ -17,6 +17,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, classification_report
+from sklearn.dummy import DummyClassifier
 from itertools import combinations
 import joblib
 
@@ -319,6 +320,7 @@ print("[8] 모델 학습")
 print("="*50)
 
 models_to_try = {
+    "Random Classifier":   DummyClassifier(strategy="uniform", random_state=42),
     "Logistic Regression": LogisticRegression(
                                max_iter=1000,
                                random_state=42
