@@ -1,0 +1,95 @@
+Device: cuda
+GPU: NVIDIA GeForce RTX 5070 Ti
+
+Loading hnm_mm_feats.npy ...
+  torch.Size([105542, 2411])  [0.3s]
+Loading H&M pair datasets ...
+  Train: 450,000  Val: 50,000
+
+Initializing Stage 2 from stage1_mm_model.pt ...
+  Proj weights loaded (S1 epoch 7, AUC=0.8763)
+Model params: 1,961,985
+Stage 2 MM training  D_ITEM=2411 ...
+  Ep 01/40 | TrLoss=0.5051 ValLoss=0.4303 AUC=0.8841 PR=0.8534 F1=0.7632 LR=1.00e-04 [12s]
+    ** Best saved (AUC=0.8841)
+  Ep 02/40 | TrLoss=0.4127 ValLoss=0.3947 AUC=0.9062 PR=0.8792 F1=0.7899 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9062)
+  Ep 03/40 | TrLoss=0.3806 ValLoss=0.3572 AUC=0.9200 PR=0.8951 F1=0.8088 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9200)
+  Ep 04/40 | TrLoss=0.3566 ValLoss=0.3360 AUC=0.9295 PR=0.9061 F1=0.8202 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9295)
+  Ep 05/40 | TrLoss=0.3382 ValLoss=0.3234 AUC=0.9377 PR=0.9156 F1=0.8299 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9377)
+  Ep 06/40 | TrLoss=0.3220 ValLoss=0.3071 AUC=0.9438 PR=0.9233 F1=0.8414 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9438)
+  Ep 07/40 | TrLoss=0.3081 ValLoss=0.2911 AUC=0.9486 PR=0.9292 F1=0.8502 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9486)
+  Ep 08/40 | TrLoss=0.2963 ValLoss=0.2792 AUC=0.9524 PR=0.9337 F1=0.8570 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9524)
+  Ep 09/40 | TrLoss=0.2852 ValLoss=0.2763 AUC=0.9555 PR=0.9374 F1=0.8608 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9555)
+  Ep 10/40 | TrLoss=0.2763 ValLoss=0.2722 AUC=0.9580 PR=0.9407 F1=0.8640 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9580)
+  Ep 11/40 | TrLoss=0.2677 ValLoss=0.2603 AUC=0.9606 PR=0.9439 F1=0.8705 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9606)
+  Ep 12/40 | TrLoss=0.2607 ValLoss=0.2531 AUC=0.9627 PR=0.9467 F1=0.8751 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9627)
+  Ep 13/40 | TrLoss=0.2538 ValLoss=0.2531 AUC=0.9638 PR=0.9479 F1=0.8770 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9638)
+  Ep 14/40 | TrLoss=0.2478 ValLoss=0.2389 AUC=0.9653 PR=0.9496 F1=0.8810 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9653)
+  Ep 15/40 | TrLoss=0.2424 ValLoss=0.2524 AUC=0.9669 PR=0.9518 F1=0.8785 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9669)
+  Ep 16/40 | TrLoss=0.2359 ValLoss=0.2373 AUC=0.9683 PR=0.9535 F1=0.8846 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9683)
+  Ep 17/40 | TrLoss=0.2309 ValLoss=0.2284 AUC=0.9692 PR=0.9548 F1=0.8880 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9692)
+  Ep 18/40 | TrLoss=0.2266 ValLoss=0.2329 AUC=0.9703 PR=0.9561 F1=0.8880 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9703)
+  Ep 19/40 | TrLoss=0.2230 ValLoss=0.2387 AUC=0.9708 PR=0.9567 F1=0.8875 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9708)
+  Ep 20/40 | TrLoss=0.2174 ValLoss=0.2411 AUC=0.9714 PR=0.9575 F1=0.8871 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9714)
+  Ep 21/40 | TrLoss=0.2144 ValLoss=0.2355 AUC=0.9718 PR=0.9578 F1=0.8889 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9718)
+  Ep 22/40 | TrLoss=0.2105 ValLoss=0.2306 AUC=0.9725 PR=0.9587 F1=0.8913 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9725)
+  Ep 23/40 | TrLoss=0.2068 ValLoss=0.2128 AUC=0.9738 PR=0.9607 F1=0.8980 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9738)
+  Ep 24/40 | TrLoss=0.2035 ValLoss=0.2107 AUC=0.9741 PR=0.9610 F1=0.8992 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9741)
+  Ep 25/40 | TrLoss=0.2001 ValLoss=0.2163 AUC=0.9746 PR=0.9617 F1=0.8990 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9746)
+  Ep 26/40 | TrLoss=0.1979 ValLoss=0.2189 AUC=0.9750 PR=0.9620 F1=0.8982 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9750)
+  Ep 27/40 | TrLoss=0.1948 ValLoss=0.2119 AUC=0.9757 PR=0.9631 F1=0.9004 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9757)
+  Ep 28/40 | TrLoss=0.1918 ValLoss=0.2048 AUC=0.9760 PR=0.9634 F1=0.9034 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9760)
+  Ep 29/40 | TrLoss=0.1894 ValLoss=0.2077 AUC=0.9764 PR=0.9638 F1=0.9029 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9764)
+  Ep 30/40 | TrLoss=0.1864 ValLoss=0.2068 AUC=0.9767 PR=0.9642 F1=0.9038 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9767)
+  Ep 31/40 | TrLoss=0.1837 ValLoss=0.2146 AUC=0.9768 PR=0.9644 F1=0.9012 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9768)
+  Ep 32/40 | TrLoss=0.1814 ValLoss=0.2011 AUC=0.9775 PR=0.9654 F1=0.9063 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9775)
+  Ep 33/40 | TrLoss=0.1783 ValLoss=0.1988 AUC=0.9777 PR=0.9656 F1=0.9080 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9777)
+  Ep 34/40 | TrLoss=0.1761 ValLoss=0.2028 AUC=0.9778 PR=0.9657 F1=0.9063 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9778)
+  Ep 35/40 | TrLoss=0.1735 ValLoss=0.2072 AUC=0.9781 PR=0.9660 F1=0.9048 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9781)
+  Ep 36/40 | TrLoss=0.1716 ValLoss=0.2007 AUC=0.9785 PR=0.9665 F1=0.9091 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9785)
+  Ep 37/40 | TrLoss=0.1693 ValLoss=0.2007 AUC=0.9786 PR=0.9667 F1=0.9082 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9786)
+  Ep 38/40 | TrLoss=0.1667 ValLoss=0.2081 AUC=0.9790 PR=0.9673 F1=0.9060 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9790)
+  Ep 39/40 | TrLoss=0.1651 ValLoss=0.1959 AUC=0.9793 PR=0.9675 F1=0.9104 LR=1.00e-04 [11s]
+    ** Best saved (AUC=0.9793)
+  Ep 40/40 | TrLoss=0.1625 ValLoss=0.2029 AUC=0.9792 PR=0.9674 F1=0.9092 LR=1.00e-04 [11s]
+
+Stage 2 MM Results:
+  Best Val AUC : 0.9793  (epoch 39)
+PIPELINE_COMPLETE

@@ -1,0 +1,40 @@
+Device: cuda
+GPU: NVIDIA GeForce RTX 5070 Ti
+
+Building article -> image path mapping ...
+  Total articles: 105,542
+  Images on disk : 105,100 (99.6%)
+  To extract     : 105,100
+
+Loading MobileNetV3-Large ...
+  Params: 4,202,032 (frozen)
+
+Extracting 105,100 image features ...
+  5,120/105,100  32 imgs/s  ETA 3109s
+  10,240/105,100  32 imgs/s  ETA 2996s
+  15,360/105,100  25 imgs/s  ETA 3571s
+  20,480/105,100  21 imgs/s  ETA 4109s
+  25,600/105,100  21 imgs/s  ETA 3763s
+  30,720/105,100  23 imgs/s  ETA 3279s
+  35,840/105,100  24 imgs/s  ETA 2890s
+  40,960/105,100  25 imgs/s  ETA 2562s
+  46,080/105,100  26 imgs/s  ETA 2275s
+  51,200/105,100  27 imgs/s  ETA 2018s
+  56,320/105,100  27 imgs/s  ETA 1781s
+  61,440/105,100  28 imgs/s  ETA 1558s
+  66,560/105,100  29 imgs/s  ETA 1349s
+  71,680/105,100  29 imgs/s  ETA 1152s
+  76,800/105,100  29 imgs/s  ETA 962s
+  81,920/105,100  30 imgs/s  ETA 778s
+  87,040/105,100  30 imgs/s  ETA 600s
+  92,160/105,100  30 imgs/s  ETA 425s
+  97,280/105,100  31 imgs/s  ETA 255s
+  102,400/105,100  31 imgs/s  ETA 87s
+
+Done in 3378.7s  (31 imgs/s)
+Saved: C:\Users\hash0\OneDrive\¹ÙÅÁ È­¸é\stt\bigadata_2026\hnm_img_1280.npy  shape=(105542, 1280)  (540.4 MB)
+  Non-zero rows (has image): 105,100
+  Zero rows (no image)     : 442
+  Coverage                 : 99.6%
+
+  Next -> Step 3c: Rebuild pair dataset with image features

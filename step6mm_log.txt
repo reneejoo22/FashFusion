@@ -1,0 +1,36 @@
+Device: cuda
+GPU: NVIDIA GeForce RTX 5070 Ti
+
+Loading poly_mm_feats.npy ...
+  poly_feats: torch.Size([142480, 2411])  [1.0s]
+Loading pair datasets ...
+  Train: 417,240  Val: 34,785  Test: 115,730
+
+Model params: 1,961,473
+Stage 1 MM training  D_ITEM=2411 ...
+  Ep 01/30 | TrLoss=0.3258 ValLoss=0.5001 ValAUC=0.8459 ValF1=0.7298 LR=3.00e-04 [16s]
+    ** Best saved (AUC=0.8459)
+  Ep 02/30 | TrLoss=0.2139 ValLoss=0.4719 ValAUC=0.8624 ValF1=0.7500 LR=3.00e-04 [9s]
+    ** Best saved (AUC=0.8624)
+  Ep 03/30 | TrLoss=0.2015 ValLoss=0.4625 ValAUC=0.8702 ValF1=0.7581 LR=3.00e-04 [9s]
+    ** Best saved (AUC=0.8702)
+  Ep 04/30 | TrLoss=0.1931 ValLoss=0.4887 ValAUC=0.8702 ValF1=0.7560 LR=3.00e-04 [9s]
+  Ep 05/30 | TrLoss=0.1868 ValLoss=0.4669 ValAUC=0.8750 ValF1=0.7616 LR=3.00e-04 [9s]
+    ** Best saved (AUC=0.8750)
+  Ep 06/30 | TrLoss=0.1804 ValLoss=0.4907 ValAUC=0.8709 ValF1=0.7607 LR=3.00e-04 [9s]
+  Ep 07/30 | TrLoss=0.1757 ValLoss=0.4659 ValAUC=0.8763 ValF1=0.7633 LR=3.00e-04 [9s]
+    ** Best saved (AUC=0.8763)
+  Ep 08/30 | TrLoss=0.1704 ValLoss=0.4997 ValAUC=0.8729 ValF1=0.7631 LR=3.00e-04 [9s]
+  Ep 09/30 | TrLoss=0.1661 ValLoss=0.4921 ValAUC=0.8708 ValF1=0.7635 LR=3.00e-04 [9s]
+  Ep 10/30 | TrLoss=0.1618 ValLoss=0.5026 ValAUC=0.8710 ValF1=0.7641 LR=1.50e-04 [9s]
+  Ep 11/30 | TrLoss=0.1504 ValLoss=0.5096 ValAUC=0.8747 ValF1=0.7683 LR=1.50e-04 [9s]
+  Ep 12/30 | TrLoss=0.1445 ValLoss=0.5304 ValAUC=0.8727 ValF1=0.7685 LR=1.50e-04 [9s]
+  Early stopping at epoch 12
+
+Loading best model (epoch 7) ...
+
+Stage 1 MM Results:
+  Best Val AUC : 0.8763  (epoch 7)
+  Test AUC     : 0.7384
+  Test F1      : 0.6696
+  Next -> step7mm_hnm_pcompat.py

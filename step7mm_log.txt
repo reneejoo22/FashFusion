@@ -1,0 +1,15 @@
+Device: cuda
+Loading stage1_mm_model.pt ...
+  epoch=7  Val AUC=0.8763
+Loading hnm_mm_feats.npy ...
+
+Scoring train (450,000 pairs) ...
+  pos=0.7250  neg=0.6584  [8.2s]
+  Updated p_compatible in hnm_pairs_mm_train.pt
+
+Scoring val (50,000 pairs) ...
+  pos=0.7213  neg=0.6587  [0.9s]
+  Updated p_compatible in hnm_pairs_mm_val.pt
+
+Saved hnm_p_compat_mm.npy  (500,000 scores)
+  Next -> step8mm_stage2_train.py

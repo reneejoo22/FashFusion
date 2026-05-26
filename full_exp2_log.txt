@@ -1,0 +1,112 @@
+Device: cuda
+
+Loading data ...
+  Val=50,000  Trn=450,000
+
+============================================================
+GROUP 3: Multi-modality ablation
+============================================================
+
+[A5] Text-only Stage2 (stage2_model.pt) ...
+  [A5_Text_Stage2]  AUC=0.9355  PR=0.9113  F1=0.8276  tfidf+bert+struct+p_compat (1131d)
+
+[A6_TextImg_noPc] Training ...
+    Loaded Stage1 proj weights
+    Ep01  TrLoss=0.5034  ValAUC=0.8852
+    Ep02  TrLoss=0.4117  ValAUC=0.9070
+    Ep03  TrLoss=0.3802  ValAUC=0.9201
+    Ep04  TrLoss=0.3565  ValAUC=0.9300
+    Ep05  TrLoss=0.3379  ValAUC=0.9376
+    Ep06  TrLoss=0.3217  ValAUC=0.9439
+    Ep07  TrLoss=0.3067  ValAUC=0.9487
+    Ep08  TrLoss=0.2953  ValAUC=0.9524
+    Ep09  TrLoss=0.2842  ValAUC=0.9553
+    Ep10  TrLoss=0.2758  ValAUC=0.9585
+    Ep11  TrLoss=0.2669  ValAUC=0.9603
+    Ep12  TrLoss=0.2597  ValAUC=0.9622
+    Ep13  TrLoss=0.2532  ValAUC=0.9642
+    Ep14  TrLoss=0.2471  ValAUC=0.9653
+    Ep15  TrLoss=0.2415  ValAUC=0.9667
+    Ep16  TrLoss=0.2364  ValAUC=0.9680
+    Ep17  TrLoss=0.2314  ValAUC=0.9689
+    Ep18  TrLoss=0.2260  ValAUC=0.9697
+    Ep19  TrLoss=0.2223  ValAUC=0.9706
+    Ep20  TrLoss=0.2180  ValAUC=0.9714
+    Ep21  TrLoss=0.2143  ValAUC=0.9719
+    Ep22  TrLoss=0.2109  ValAUC=0.9726
+    Ep23  TrLoss=0.2078  ValAUC=0.9734
+    Ep24  TrLoss=0.2053  ValAUC=0.9741
+    Ep25  TrLoss=0.2002  ValAUC=0.9743
+    Ep26  TrLoss=0.1980  ValAUC=0.9748
+    Ep27  TrLoss=0.1946  ValAUC=0.9748
+    Ep28  TrLoss=0.1920  ValAUC=0.9755
+    Ep29  TrLoss=0.1886  ValAUC=0.9759
+    Ep30  TrLoss=0.1861  ValAUC=0.9762
+  [A6_TextImg_noPc]  AUC=0.9762  PR=0.9634  F1=0.8998  2411d, no cross-domain p_compat
+
+[A7] Full MM Stage2 (stage2_mm_model.pt) ...
+  [A7_FullMM_Stage2]  AUC=0.9793  PR=0.9675  F1=0.9104  text+img+p_compat (2411d) BEST
+
+============================================================
+GROUP 4: Transfer ablation
+============================================================
+
+[T1_MM_NoTransfer] Training ...
+    Ep01  TrLoss=0.4402  ValAUC=0.9213
+    Ep02  TrLoss=0.3379  ValAUC=0.9442
+    Ep03  TrLoss=0.2929  ValAUC=0.9573
+    Ep04  TrLoss=0.2654  ValAUC=0.9631
+    Ep05  TrLoss=0.2477  ValAUC=0.9667
+    Ep06  TrLoss=0.2330  ValAUC=0.9696
+    Ep07  TrLoss=0.2212  ValAUC=0.9713
+    Ep08  TrLoss=0.2118  ValAUC=0.9730
+    Ep09  TrLoss=0.2033  ValAUC=0.9740
+    Ep10  TrLoss=0.1960  ValAUC=0.9752
+    Ep11  TrLoss=0.1885  ValAUC=0.9765
+    Ep12  TrLoss=0.1825  ValAUC=0.9767
+    Ep13  TrLoss=0.1763  ValAUC=0.9775
+    Ep14  TrLoss=0.1722  ValAUC=0.9781
+    Ep15  TrLoss=0.1681  ValAUC=0.9784
+    Ep16  TrLoss=0.1640  ValAUC=0.9789
+    Ep17  TrLoss=0.1591  ValAUC=0.9800
+    Ep18  TrLoss=0.1550  ValAUC=0.9802
+    Ep19  TrLoss=0.1524  ValAUC=0.9809
+    Ep20  TrLoss=0.1485  ValAUC=0.9804
+    Ep21  TrLoss=0.1455  ValAUC=0.9810
+    Ep22  TrLoss=0.1412  ValAUC=0.9816
+    Ep23  TrLoss=0.1391  ValAUC=0.9816
+    Ep24  TrLoss=0.1362  ValAUC=0.9809
+    Ep25  TrLoss=0.1335  ValAUC=0.9813
+    Ep26  TrLoss=0.1304  ValAUC=0.9820
+    Ep27  TrLoss=0.1292  ValAUC=0.9825
+    Ep28  TrLoss=0.1249  ValAUC=0.9824
+    Ep29  TrLoss=0.1237  ValAUC=0.9829
+    Ep30  TrLoss=0.1219  ValAUC=0.9823
+  [T1_MM_NoTransfer]  AUC=0.9829  PR=0.9719  F1=0.9181  MM 2411d+p_compat, random proj init
+  [T2_MM_WithTransfer]  AUC=0.9793  PR=0.9675  F1=0.9104  =A7, MM + Polyvore proj init (BEST)
+
+========================================================================
+Model                      Group            AUC   PR-AUC      F1
+------------------------------------------------------------------------
+  --- Baseline ---
+  B1_Random                Baseline      0.5033   0.4041  0.4480
+  B2_Popularity            Baseline      0.9250   0.8816  0.0081
+  B3_Jaccard               Baseline      0.5303   0.4378  0.0000
+  B4_Cosine_Text           Baseline      0.7021   0.6542  0.5730
+  B5_Cosine_Image          Baseline      0.6494   0.5853  0.5744
+  --- SingleModal ---
+  A1_TFIDF_only            SingleModal   0.9664   0.9497  0.8737
+  A2_BERT_only             SingleModal   0.9485   0.9275  0.8271
+  A3_Struct_only           SingleModal   0.7355   0.6680  0.5440
+  A4_Image_only            SingleModal   0.9676   0.9510  0.8795
+  --- MultiModal ---
+  A5_Text_Stage2           MultiModal    0.9355   0.9113  0.8276
+  A6_TextImg_noPc          MultiModal    0.9762   0.9634  0.8998
+  A7_FullMM_Stage2         MultiModal    0.9793   0.9675  0.9104
+  --- Transfer ---
+  T1_MM_NoTransfer         Transfer      0.9829   0.9719  0.9181 <-BEST
+  T2_MM_WithTransfer       Transfer      0.9793   0.9675  0.9104
+========================================================================
+
+Saved: C:\Users\hash0\OneDrive\¹ÙÅÁ È­¸é\stt\bigadata_2026\full_experiment_results.csv
+EXPERIMENTS_COMPLETE

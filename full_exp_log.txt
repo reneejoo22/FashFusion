@@ -1,0 +1,135 @@
+Device: cuda
+GPU: NVIDIA GeForce RTX 5070 Ti
+
+Loading shared data ...
+  Loaded 3.5s  Val=50,000 Trn=450,000
+
+============================================================
+GROUP 1: Baselines
+============================================================
+
+[B1] Random ...
+  [B1_Random]  AUC=0.5033  PR=0.4041  F1=0.4480  
+
+[B2] Popularity ...
+  [B2_Popularity]  AUC=0.9250  PR=0.8816  F1=0.0081  
+
+[B3] Jaccard ...
+  [B3_Jaccard]  AUC=0.5303  PR=0.4378  F1=0.0000  
+
+[B4] Cosine-Text baseline (no training) ...
+  [B4_Cosine_Text]  AUC=0.7021  PR=0.6542  F1=0.5730  
+
+[B5] Cosine-Image baseline (no training) ...
+  [B5_Cosine_Image]  AUC=0.6494  PR=0.5853  F1=0.5744  
+
+============================================================
+GROUP 2: Single-modality ablation
+============================================================
+
+[A1_TFIDF_only] Training ...
+    Ep01  TrLoss=0.4954  ValAUC=0.8931
+    Ep02  TrLoss=0.4052  ValAUC=0.9136
+    Ep03  TrLoss=0.3716  ValAUC=0.9267
+    Ep04  TrLoss=0.3506  ValAUC=0.9354
+    Ep05  TrLoss=0.3327  ValAUC=0.9411
+    Ep06  TrLoss=0.3205  ValAUC=0.9454
+    Ep07  TrLoss=0.3095  ValAUC=0.9491
+    Ep08  TrLoss=0.3004  ValAUC=0.9519
+    Ep09  TrLoss=0.2931  ValAUC=0.9540
+    Ep10  TrLoss=0.2850  ValAUC=0.9559
+    Ep11  TrLoss=0.2789  ValAUC=0.9579
+    Ep12  TrLoss=0.2730  ValAUC=0.9592
+    Ep13  TrLoss=0.2691  ValAUC=0.9603
+    Ep14  TrLoss=0.2638  ValAUC=0.9613
+    Ep15  TrLoss=0.2599  ValAUC=0.9626
+    Ep16  TrLoss=0.2555  ValAUC=0.9632
+    Ep17  TrLoss=0.2514  ValAUC=0.9644
+    Ep18  TrLoss=0.2482  ValAUC=0.9651
+    Ep19  TrLoss=0.2439  ValAUC=0.9656
+    Ep20  TrLoss=0.2412  ValAUC=0.9664
+  [A1_TFIDF_only]  AUC=0.9664  PR=0.9497  F1=0.8737  300d
+
+[A2_BERT_only] Training ...
+    Ep01  TrLoss=0.5013  ValAUC=0.8790
+    Ep02  TrLoss=0.4304  ValAUC=0.8936
+    Ep03  TrLoss=0.4094  ValAUC=0.9032
+    Ep04  TrLoss=0.3949  ValAUC=0.9079
+    Ep05  TrLoss=0.3849  ValAUC=0.9154
+    Ep06  TrLoss=0.3745  ValAUC=0.9201
+    Ep07  TrLoss=0.3656  ValAUC=0.9226
+    Ep08  TrLoss=0.3595  ValAUC=0.9253
+    Ep09  TrLoss=0.3519  ValAUC=0.9299
+    Ep10  TrLoss=0.3461  ValAUC=0.9330
+    Ep11  TrLoss=0.3397  ValAUC=0.9351
+    Ep12  TrLoss=0.3370  ValAUC=0.9355
+    Ep13  TrLoss=0.3323  ValAUC=0.9386
+    Ep14  TrLoss=0.3265  ValAUC=0.9405
+    Ep15  TrLoss=0.3230  ValAUC=0.9426
+    Ep16  TrLoss=0.3180  ValAUC=0.9435
+    Ep17  TrLoss=0.3155  ValAUC=0.9455
+    Ep18  TrLoss=0.3105  ValAUC=0.9464
+    Ep19  TrLoss=0.3077  ValAUC=0.9478
+    Ep20  TrLoss=0.3033  ValAUC=0.9485
+  [A2_BERT_only]  AUC=0.9485  PR=0.9275  F1=0.8271  768d
+
+[A3_Struct_only] Training ...
+    Ep01  TrLoss=0.6160  ValAUC=0.7157
+    Ep02  TrLoss=0.5951  ValAUC=0.7230
+    Ep03  TrLoss=0.5910  ValAUC=0.7265
+    Ep04  TrLoss=0.5879  ValAUC=0.7297
+    Ep05  TrLoss=0.5862  ValAUC=0.7311
+    Ep06  TrLoss=0.5855  ValAUC=0.7329
+    Ep07  TrLoss=0.5843  ValAUC=0.7333
+    Ep08  TrLoss=0.5839  ValAUC=0.7338
+    Ep09  TrLoss=0.5835  ValAUC=0.7338
+    Ep10  TrLoss=0.5829  ValAUC=0.7338
+    Ep11  TrLoss=0.5827  ValAUC=0.7339
+    Ep12  TrLoss=0.5824  ValAUC=0.7341
+    Ep13  TrLoss=0.5823  ValAUC=0.7348
+    Ep14  TrLoss=0.5820  ValAUC=0.7342
+    Ep15  TrLoss=0.5819  ValAUC=0.7348
+    Ep16  TrLoss=0.5816  ValAUC=0.7347
+    Ep17  TrLoss=0.5814  ValAUC=0.7346
+    Ep18  TrLoss=0.5809  ValAUC=0.7355
+    Ep19  TrLoss=0.5808  ValAUC=0.7352
+    Ep20  TrLoss=0.5806  ValAUC=0.7351
+  [A3_Struct_only]  AUC=0.7355  PR=0.6680  F1=0.5440  63d
+
+[A4_Image_only] Training ...
+    Ep01  TrLoss=0.5393  ValAUC=0.8621
+    Ep02  TrLoss=0.4380  ValAUC=0.9029
+    Ep03  TrLoss=0.3918  ValAUC=0.9217
+    Ep04  TrLoss=0.3624  ValAUC=0.9320
+    Ep05  TrLoss=0.3404  ValAUC=0.9395
+    Ep06  TrLoss=0.3229  ValAUC=0.9451
+    Ep07  TrLoss=0.3095  ValAUC=0.9494
+    Ep08  TrLoss=0.2997  ValAUC=0.9519
+    Ep09  TrLoss=0.2885  ValAUC=0.9547
+    Ep10  TrLoss=0.2807  ValAUC=0.9561
+    Ep11  TrLoss=0.2732  ValAUC=0.9581
+    Ep12  TrLoss=0.2664  ValAUC=0.9603
+    Ep13  TrLoss=0.2588  ValAUC=0.9604
+    Ep14  TrLoss=0.2531  ValAUC=0.9621
+    Ep15  TrLoss=0.2484  ValAUC=0.9636
+    Ep16  TrLoss=0.2437  ValAUC=0.9640
+    Ep17  TrLoss=0.2385  ValAUC=0.9652
+    Ep18  TrLoss=0.2337  ValAUC=0.9663
+    Ep19  TrLoss=0.2293  ValAUC=0.9669
+    Ep20  TrLoss=0.2261  ValAUC=0.9676
+  [A4_Image_only]  AUC=0.9676  PR=0.9510  F1=0.8795  1280d
+
+============================================================
+GROUP 3: Multi-modality ablation
+============================================================
+
+[A5] Text-only Stage2 (existing stage2_model.pt) ...
+Traceback (most recent call last):
+  File "C:\Users\hash0\OneDrive\πŸ≈¡ »≠∏È\stt\bigadata_2026\full_experiments.py", line 305, in <module>
+    m5.load_state_dict(ckpt5['model_state'])
+  File "C:\Users\hash0\OneDrive\πŸ≈¡ »≠∏È\stt\cuda_env\Lib\site-packages\torch\nn\modules\module.py", line 2639, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for Stage2TextModel:
+	Missing key(s) in state_dict: "proj.0.weight", "proj.0.bias", "proj.1.weight", "proj.1.bias", "proj.4.weight", "proj.4.bias", "proj.5.weight", "proj.5.bias". 
+	Unexpected key(s) in state_dict: "proj.net.0.weight", "proj.net.0.bias", "proj.net.1.weight", "proj.net.1.bias", "proj.net.4.weight", "proj.net.4.bias", "proj.net.5.weight", "proj.net.5.bias". 
+	size mismatch for fusion.0.weight: copying a param with shape torch.Size([512, 1031]) from checkpoint, the shape in current model is torch.Size([512, 1030]).

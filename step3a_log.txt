@@ -1,0 +1,24 @@
+Device: cuda
+GPU: NVIDIA GeForce RTX 5070 Ti
+
+Building item -> image path mapping ...
+  Total items     : 142,480
+  Items with image: 27,372 (19.2%)
+  To extract: 27,372
+
+Loading MobileNetV3-Large ...
+  Params: 4,202,032 (frozen)
+
+Extracting 27,372 image features ...
+  5,120/27,372  94 imgs/s  ETA 238s
+  10,240/27,372  106 imgs/s  ETA 161s
+  15,360/27,372  109 imgs/s  ETA 110s
+  20,480/27,372  118 imgs/s  ETA 58s
+  25,600/27,372  120 imgs/s  ETA 15s
+
+Done in 233.8s  (117 imgs/s)
+Saved: C:\Users\hash0\OneDrive\¹ÙÅÁ È­¸é\stt\bigadata_2026\poly_img_1280.npy  shape=(142480, 1280)  (729.5 MB)
+  Non-zero rows (has image): 27,372
+  Zero rows (no image)     : 115,108
+
+  Next -> Step 3b: H&M image features (after Kaggle download)

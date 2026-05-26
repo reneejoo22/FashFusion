@@ -1,0 +1,21 @@
+Device: cuda
+
+Loading data ...
+  Loaded in 4.5s
+  Val: 50,000 pairs  pos=40.2%
+
+[E1] Random baseline ...
+  [E1_Random]  AUC=0.5033  PR=0.4041  F1=0.4480  
+
+[E2] Popularity baseline ...
+  [E2_Popularity]  AUC=0.9250  PR=0.8816  F1=0.0081  
+
+[E3] Jaccard co-occurrence baseline ...
+  [E3_Jaccard]  AUC=0.5303  PR=0.4378  F1=0.0000  
+
+[E4] Text-only Stage2 (existing model) ...
+Traceback (most recent call last):
+  File "C:\Users\hash0\OneDrive\πŸ≈¡ »≠∏È\stt\bigadata_2026\ablation_experiments.py", line 161, in <module>
+    m_txt.load_state_dict(ckpt['model_state_dict'])
+                          ~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'model_state_dict'

@@ -1,0 +1,15 @@
+﻿model,group,val_auc,val_prauc,val_f1,note
+B1_Random,Baseline,0.5033,0.4041,0.448,
+B2_Popularity,Baseline,0.925,0.8816,0.0081,
+B3_Jaccard,Baseline,0.5303,0.4378,0.0,
+B4_Cosine_Text,Baseline,0.7021,0.6542,0.573,
+B5_Cosine_Image,Baseline,0.6494,0.5853,0.5744,
+A1_TFIDF_only,SingleModal,0.9668,0.9504,0.8805,300d
+A2_BERT_only,SingleModal,0.949,0.9286,0.8512,768d
+A3_Struct_only,SingleModal,0.7354,0.6677,0.5418,63d
+A4_Image_only,SingleModal,0.9672,0.9505,0.8759,1280d
+A5_Text_Stage2,MultiModal,0.9591,0.9412,0.8695,tfidf+bert+struct+p_compat (1131d)
+A6_TextImg_noPc,MultiModal,0.9763,0.9637,0.904,"2411d, no p_compat"
+A7_FullMM_Stage2,MultiModal,0.9793,0.9675,0.9104,tfidf+bert+struct+img+p_compat (2411d)
+T1_MM_NoTransfer,Transfer,0.9834,0.9731,0.9115,"MM 2411d+p_compat, random proj init"
+T2_MM_WithTransfer,Transfer,0.9793,0.9675,0.9104,"=A7, MM 2411d+p_compat, Polyvore proj init"

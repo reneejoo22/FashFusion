@@ -1,0 +1,34 @@
+# ── 대용량 피처 행렬 ──────────────────────────────────────
+*.npy
+*.npz
+
+# ── 대용량 페어 데이터셋 (원본, GB급) ───────────────────────
+hnm_pairs_train.pt
+hnm_pairs_val.pt
+poly_pairs_train.pt
+poly_pairs_val.pt
+poly_pairs_test.pt
+
+# ── 아카이브 / 원본 데이터 ──────────────────────────────────
+*.zip
+data/
+
+# ── Pickle 매핑 파일 (코드 실행 시 재생성) ─────────────────
+*.pkl
+
+# ── 중간 처리 결과 ────────────────────────────────────────
+polyvore_text_features_final.json
+polyvore_tfidf_features_final.npz
+polyvore_tfidf_vocabulary.csv
+polyvore_tpo_features.csv
+polyvore_removed_words.csv
+hnm_tfidf_features_final.npz
+hnm_removed_words.csv
+item_id_list.pkl
+
+# ── Python 캐시 ───────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python

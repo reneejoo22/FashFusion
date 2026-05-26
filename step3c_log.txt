@@ -1,0 +1,22 @@
+Loading feature matrices ...
+  Loaded in 2.0s
+  poly_mm: (142480, 2411)  hnm_mm: (105542, 2411)
+  Saved poly_mm_feats.npy  (1.37 GB)
+  Saved hnm_mm_feats.npy   (1.02 GB)
+
+Building reverse lookup tables ...
+  poly_lookup: 126,759/142,480  hnm_lookup: 99,383/105,542
+
+Rebuilding Polyvore multimodal pair index files ...
+  train:  417,240 pairs  pos=166,896 (40.0%)  file=16.7MB  [6.3s]
+  val  :   34,785 pairs  pos=13,914 (40.0%)  file=1.4MB  [0.7s]
+  test :  115,730 pairs  pos=50,144 (43.3%)  file=4.6MB  [1.2s]
+
+Rebuilding H&M multimodal pair index files ...
+  train:  450,000 pairs  pos=179,924 (40.0%)  file=19.8MB  [5.3s]
+  val  :   50,000 pairs  pos=20,076 (40.2%)  file=2.2MB  [0.7s]
+
+Done in 20.2s
+  Pair files store indices only (small, no ZIP64 issue)
+  Feature matrices: poly_mm_feats.npy / hnm_mm_feats.npy
+  Next -> step6mm_stage1_train.py
